@@ -13,6 +13,17 @@ todo_list.add(todo_1)
 todo_list.incomplete() #=> [todo_1]
 
 """
+Given mulliple todo tasks
+They are all reflected in the todo list
+"""
+todo_list = TodoList()
+todo_1 = Todo("Walk the dog")
+todo_2 = Todo("Walk the frog")
+todo_list.add(todo_1)
+todo_list.add(todo_2)
+todo_list.incomplete() #=> [todo_1, todo_2]
+
+"""
 Given multiple todo tasks
 And one is marked complete
 #incomplete returns the incompleted tasks
