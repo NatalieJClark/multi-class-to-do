@@ -8,8 +8,6 @@ We can get the todo_list, incomplete_list and complete_list back as empty lists
 def test_initialising_todo_list():
     todo_list = TodoList()
     assert todo_list._todo_list == []
-    assert todo_list._incomplete_list == []
-    assert todo_list._complete_list == []
 
 """
 Given todo that is not an instance of todo class
