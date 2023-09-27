@@ -21,4 +21,4 @@ class Todo:
         #   Nothing
         # Side-effects:
         #   Sets the complete property to True
-        pass
+        self.complete = True
