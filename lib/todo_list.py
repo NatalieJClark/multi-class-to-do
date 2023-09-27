@@ -3,8 +3,6 @@ from lib.todo import Todo
 class TodoList:
     def __init__(self):
         self._todo_list = []
-        self._incomplete_list = []
-        self._complete_list = []
 
     def add(self, todo):
         # Parameters:
@@ -20,18 +18,14 @@ class TodoList:
     def incomplete(self):
         # Returns:
         #   A list of Todo instances representing the todos that are not complete
-        for todo in self._todo_list:
-            if todo.complete == False:
-                self._incomplete_list.append(todo)
-        return self._incomplete_list
+        incomplete = list(filter(lambda todo : todo.complete != True, self._todo_list))
+        return incomplete
 
     def complete(self):
         # Returns:
         #   A list of Todo instances representing the todos that are complete
-        for todo in self._todo_list:
-            if todo.complete == True:
-                self._complete_list.append(todo)
-        return self._complete_list
+        complete = list(filter(lambda todo : todo.complete == True, self._todo_list))
+        return complete
 
     def give_up(self):
         # Returns:
